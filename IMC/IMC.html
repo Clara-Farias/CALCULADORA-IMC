@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>IMC</title>
+</head>
+<body>
+    <div class="container" >
+    <div class="content">           
+      <!--FORMULÁRIO DE CADASTRO-->
+      <div id="imc">
+        <form> 
+          <h1>IMC</h1> 
+          <p> 
+            <label for="Peso">Peso</label>
+            <input type="number" id="Peso" name="Peso"/> 
+          </p>
+          <p> 
+            <label for="Altura">Altura</label>
+            <input type="number" id="Altura" name="Altura"/>
+          </p>
+          <div>
+            <input id='btn_calcular' class='botao' type="button" value="Calcular">
+            </div>
+            <div id="resultado"></div>
+            </div>
+        </form>
+        <script>
+          let botaoCalcular = document.getElementById(btn_calcular);
+          function IMC() {
+          let Altura = document.getElementById("Altura").value;
+          let Peso = document.getElementById("Peso").value;
+          //let resultado = document.getElementById("resultado");
+
+          let IMC = (Peso / (Altura*Altura));
+          
+          resultado.textContent = `Seu IMC é ${IMC}!`; 
+          }
+          btn_calcular.addEventListener('click', IMC);
+      </script>
+</body>
+</html>
